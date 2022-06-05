@@ -59,11 +59,4 @@ router.post("/update-products",auth,(req,res)=>{
     res.send({msg:"ok"});
 })
 
-router.get("/check",(req,res)=>{
- // console.log(req.body);
-  res.send({msg:"ok"});
-})
-
-
-
 module.exports = router;
