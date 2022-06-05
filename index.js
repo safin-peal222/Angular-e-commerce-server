@@ -5,7 +5,7 @@ const app = express();
 const dotenv = require("dotenv");
 dotenv.config();
 app.use(express.json());
-const port = 5000;
+const port = process.env.PORT || 5000;
 app.use(cors());
 
 const userHandler =require('./routehandler/userHandler');
