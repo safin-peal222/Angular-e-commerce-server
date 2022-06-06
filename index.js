@@ -30,7 +30,11 @@ app.use("/admin",productHandler);
 
 
 
-  
+app.use(function (request, response, next) {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })
