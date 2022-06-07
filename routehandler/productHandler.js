@@ -30,7 +30,7 @@ catch{
 })
 
 
-router.get('/add-products',auth,async(req,res)=>{
+router.get('/add-products',async(req,res)=>{
   try{
     const cursor=await products.find({});
     res.send(cursor);
